@@ -1,9 +1,13 @@
 const router = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-const { readAndAppend, readFromFile } = require('../../public/helpers/fsUtils');
+const {
+  readFromFile,
+  readAndAppend,
+  writeToFile,
+} = require('../../public/helpers/fsUtils');
 
 // GET Route for retrieving the HTML notes file
-router.get('/', (req, res) =>
+router.get('/notes', (req, res) =>
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
     );
 
@@ -41,7 +45,7 @@ router.delete('/notes/:id', (req, res) => {
 router.post('/notes', (req, res) => {
   console.log(req.body);
 
-  const { username, topic, note } = req.body;
+  const { title, text } = req.body;
 
   if (req.body) {
     const newNote = {
