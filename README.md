@@ -11,7 +11,7 @@
 ## Installation
 ### Prerequisites-local machine
 This CLI app uses Node.js and Express.js, so you will need to install both.
-// TODO
+
 Heroku
 
 ## Usage
