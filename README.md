@@ -22,13 +22,24 @@ Heroku
   - `npm init`
   - `npm install`
 
+**Heroku**
+- Create an account with Heroku
+- Link your GitHub account with Heroku
+- Run the following commands
+  -Heroku:
+     - `heroku auth:login`
+     - `heroku create`
+     - `git remote -v` 
+     - `git push heroku main`
+
 **Use the below command to run the CLI app locally**
-Right click the index.html file and open woth default browser
-`/public/assets/js/index.js`
+`node server.js`
 
 
-![demo image]()
+![Demo_Heroku_Image](https://user-images.githubusercontent.com/87400584/213625736-e01e4184-14f8-4aee-a3e7-6d8db98f105f.png)
 
+## Heroku Deployed link to app
+[Heroku Link](https://evening-thicket-56562.herokuapp.com/)
 
 ## Features 
  - Application is deployed to Heroku for a repeatble and reliable user experience
